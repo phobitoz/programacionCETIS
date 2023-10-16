@@ -5,7 +5,7 @@ Proyecto Aprende a Programar con CETIS 35
 Capturas de Pantalla
 
 
-![avances de la pagina ](34-screenshot.png)
+![avances de la pagina ](/screnshots/2023-10-14-15:09:34-screenshot.png)
 
 
 Tecnologías 
