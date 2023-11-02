@@ -1,1 +1,71 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+  :root {
+    --naranja:rgba(233, 141, 20, 0.966);
+    --morado: #764fee;
+    --fondo: #404040;
+    --blanco:#f4f4f4e9;
+    --verde:#83e277e0;
+    --azul:#7fdff7;
+    --rojo:rgba(137, 26, 35, 0.865);
+    /** Fonts **/
+    --poppins: 'Poppins', sans-serif;
+    --font-small: 0.877rem;
+    --font-medium: 1rem;
+    --font-big: 1.6rem;
+    --icon: 4rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+     background-color: var(--fondo);
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.39'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+
+  main  {
+    margin: auto;
+    width: 99%;
+	padding-bottom:40%;
+    background-color: var(--blanco);
+    padding: 29px;
+    height:120%;
+    border-radius: 15px;
+  }
+
+ header{
+margin:auto;
+background-color: var(--morado);
+ } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Scroll Personalizado */
+
+  body::-webkit-scrollbar {
+    width: 10px;
+    background: var(--fondo);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #000000a9;
+    border-radius: 10px;
+}
