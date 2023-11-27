@@ -19,11 +19,6 @@
     --icon: 4rem;
 }
 
-body {
-    font-family: var(--poppins);
-    margin: 0;
-    padding: 0;
-}
 
 header {
     background-color: var(--fondo);
