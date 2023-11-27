@@ -18,61 +18,51 @@
     --font-big: 1.6rem;
     --icon: 4rem;
 }
-
-
-header {
-    background-color: var(--fondo);
-    color: var(--blanco);
-    padding: 20px;
-    text-align: center;
+/* Estilos para la barra de navegación */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav {
-    background-color: var(--fondo);
-    padding: 10px 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+nav ul li {
+  padding: 10px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-li {
-    display: inline;
-    margin-right: 20px;
-    transition: color 0.3s ease-in-out;
+nav ul li a:hover {
+  color: orange;
+  cursor: pointer;
 }
 
-a {
-    color: var(--blanco);
-    text-decoration: none;
-    padding: 10px;
-    font-size: var(--font-medium);
-    transition: color 0.3s ease-in-out;
+/* Ocultar todas las secciones excepto la sección con ID correspondiente al enlace clickeado */
+main section {
+  display: none;
 }
 
-a:hover,
-li.active {
-    color: var(--naranja);
+main section:target {
+  display: block;
 }
 
-/* Animación para el título */
-h1 {
-    font-size: var(--font-big);
-    animation: bounce 1s infinite;
+/* Animación para las secciones */
+main section {
+  animation: fadein 0.5s ease-in-out;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
