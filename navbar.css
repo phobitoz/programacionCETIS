@@ -1,0 +1,83 @@
+/* Importar la fuente Noto Sans desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+:root {
+    /* Colores */
+    --naranja: rgba(233, 141, 20, 0.966);
+    --morado: #764fee;
+    --fondo: #404040;
+    --blanco: #f4f4f4e9;
+    --verde: #83e277e0;
+    --azul: #7fdff7;
+    --rojo: rgba(137, 26, 35, 0.865);
+
+    /** Fonts **/
+    --poppins: 'Poppins', sans-serif;
+    --font-small: 0.877rem;
+    --font-medium: 1rem;
+    --font-big: 1.6rem;
+    --icon: 4rem;
+}
+
+body {
+    font-family: var(--poppins);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--fondo);
+    color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--fondo);
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px;
+    font-size: var(--font-medium);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover,
+li.active {
+    color: var(--naranja);
+}
+
+/* Animación para el título */
+h1 {
+    font-size: var(--font-big);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
