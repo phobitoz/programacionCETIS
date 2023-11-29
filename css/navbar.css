@@ -1,68 +1,96 @@
 /* Importar la fuente Noto Sans desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
-:root {
-    /* Colores */
-    --naranja: rgba(233, 141, 20, 0.966);
-    --morado: #764fee;
-    --fondo: #404040;
-    --blanco: #f4f4f4e9;
-    --verde: #83e277e0;
-    --azul: #7fdff7;
-    --rojo: rgba(137, 26, 35, 0.865);
+header{width:100%;
+   display:table;
+    background-color:var(--fondo); 
+    margin-bottom:30px;}
 
-    /** Fonts **/
-    --poppins: 'Poppins', sans-serif;
-    --font-small: 0.877rem;
-    --font-medium: 1rem;
-    --font-big: 1.6rem;
-    --icon: 4rem;
-}
+
+.logog{float:left; font-size:24px;
+    color:#1a0404; 
+    font-weight:600; 
+    padding:20px 0px;}
 /* Estilos para la barra de navegación */
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
+
+li{
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
-
-nav ul li {
-  padding: 10px;
+.navbar{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
 }
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+.nav-menu{
+  display: flex;
+  align-items: center;
 }
-
-nav ul li a:hover {
-  color: orange;
+.nav-branding{
+  font-size: 2rem;
+}
+/* transition for links */
+.nav-link{
+  transition: 0.5s ease;
+}
+.nav-link:hover{
+  color:var(--blanco);
+}
+.hamburger{
+  display: none;
   cursor: pointer;
 }
-
-/* Ocultar todas las secciones excepto la sección con ID correspondiente al enlace clickeado */
-main section {
-  display: none;
+.bar{
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background:var(--blanco);
+}
+.nav-item{
+  padding: 0 1.5rem;
 }
 
-main section:target {
-  display: block;
-}
+/* Transform the navbar into a hamburger menu. */
 
-/* Animación para las secciones */
-main section {
-  animation: fadein 0.5s ease-in-out;
-}
-
-@keyframes fadein {
-  from {
+@media(max-width: 760px){
+  .bar{
+    display: block;
+  }
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
     opacity: 0;
   }
-  to {
-    opacity: 1;
+  .hamburger.active .bar:nth-child(1){
+    transform: rotate(45deg) translateY(11.5px); 
+  }  
+  .hamburger.active .bar:nth-child(3){
+    transform: rotate(-45deg) translateY(-11.5px); 
   }
+  .nav-menu{
+    margin-top: 30px;
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background:var(--GrisT);
+     border-radius: 15px;
+    transition: 0.9s;
+  }
+  .nav-item{
+    padding: 1.5rem 0;
+  }
+  
+  .nav-menu.active{
+    right: 0;
+  }
+  
 }
 
