@@ -34,6 +34,8 @@ li{
 /* transition for links */
 .nav-link{
   transition: 0.5s ease;
+     color:var(--blanco)
+
 }
 .nav-link:hover{
   color:var(--blanco);
