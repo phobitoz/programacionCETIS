@@ -29,7 +29,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 }))
 document.addEventListener('DOMContentLoaded', function() {
     // Obtener la sección de "Inicio"
-    const inicioSection = document.getElementById('#inicio');
+    const inicioSection = document.getElementById('inicio');
 
     // Mostrar la sección de "Inicio" al cargar la página
     inicioSection.style.display = 'block';
